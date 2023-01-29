@@ -12,3 +12,11 @@ public class Engel : MonoBehaviour
         _scene = SceneManager.GetActiveScene();  //en baþtaki scene i tanýmlýyoruz
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(_scene.name);
+        }
+    }
+}
